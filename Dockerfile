@@ -1,9 +1,12 @@
 FROM node:12.18.1
+
+RUN apt-get update &&\
+    apt-get install -y git vim &&\
+    rm -rf /var/lib/apt/lists/*
  
 WORKDIR /code
  
-COPY package.json package.json
-COPY package-lock.json package-lock.json
+COPY *.json .
  
 RUN npm install
  

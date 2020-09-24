@@ -1,3 +1,6 @@
+# Snyk test outputs
+snyk-out*.json
+
 # Logs
 logs
 *.log
